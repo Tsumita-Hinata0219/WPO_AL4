@@ -163,6 +163,8 @@
     <ClCompile Include="Project\GameObject\Camera\RailCamera\RailCamera.cpp" />
     <ClCompile Include="Project\GameObject\Camera\BaseCamera.cpp" />
     <ClCompile Include="Project\GameObject\Character\Player\Player.cpp" />
+    <ClCompile Include="Project\GameObject\Character\Player\Bullet\PlayerBullet.cpp" />
+    <ClCompile Include="Project\GameObject\Character\Player\Reticle\PlayerReticle.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="externals\imgui\imconfig.h" />
@@ -346,6 +348,8 @@
     <ClInclude Include="Project\GameObject\Camera\RailCamera\RailCamera.h" />
     <ClInclude Include="Project\GameObject\Camera\BaseCamera.h" />
     <ClInclude Include="Project\GameObject\Character\Player\Player.h" />
+    <ClInclude Include="Project\GameObject\Character\Player\Bullet\PlayerBullet.h" />
+    <ClInclude Include="Project\GameObject\Character\Player\Reticle\PlayerReticle.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\shaders\LambertObject.hlsli" />

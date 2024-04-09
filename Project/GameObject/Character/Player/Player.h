@@ -1,10 +1,12 @@
 #pragma once
 
 #include "GameObject.h"
+#include "Player/Bullet/PlayerBullet.h"
+#include "Player/Reticle/PlayerReticle.h"
 
 class GameScene;
 
-class Player {
+class Player : public OBBCollider {
 
 public:
 
@@ -79,7 +81,7 @@ private:
 
 private:
 
-	//unique_ptr<PlayerReticle> reticle_ = nullptr;
+	unique_ptr<PlayerReticle> reticle_ = nullptr;
 
 #pragma endregion 
 };
