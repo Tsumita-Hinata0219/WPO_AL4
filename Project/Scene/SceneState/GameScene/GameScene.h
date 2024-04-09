@@ -6,18 +6,12 @@
 
 #include "Camera/MainCamera/MainCamera.h"
 
-#include "Player/Player.h"
-#include "Player/PlayerBullet/IPlayerBullet.h"
-#include "Player/PlayerBullet/NormalBullet/NormalBullet.h"
+//#include "Player/Player.h"
 
 #include "Skydome/Skydome.h"
 #include "Ground/Ground.h"
 
 #include "CollisionManager.h"
-#include "Enemy/Trace/Trace.h"
-#include "Enemy/EnemyManager/EnemyManager.h"
-
-#include "LevelManager/LevelManager.h"
 
 
 class GameScene : public IScene {
@@ -62,24 +56,7 @@ public:
 	/// <summary>
 	/// プレイヤーバレットリストの追加
 	/// </summary>
-	void AddPlayerBullets(shared_ptr<IPlayerBullet> bullet) { playerBullets_.push_back(bullet); }
-
-public:
-
-	/// <summary>
-	/// ウェーブの初期化処理
-	/// </summary>
-	void WaveInit();
-
-	/// <summary>
-	/// ウェーブの更新処理
-	/// </summary>
-	void WaveUpdate();
-
-	/// <summary>
-	/// ウェーブの終了処理
-	/// </summary>
-	void WaveExit();
+	//void AddPlayerBullets(shared_ptr<IPlayerBullet> bullet) { playerBullets_.push_back(bullet); }
 
 private:
 
@@ -105,36 +82,13 @@ private:
 	unique_ptr<Camera> camera_ = nullptr;
 	unique_ptr<MainCamera> mainCamera_ = nullptr;
 
-	/* ----- GameWave ゲームウェーブ ----- */
-	int waveCount_;
-	int waveMax_;
-	int waveNowTime_;
-	int waveEndTime_;
-	bool isWaveStart_;
-	bool isSceneChange_;
-	bool isWaveGaming_;
-
-
 	/* ----- Player プレイヤー ----- */
-	unique_ptr<Player> player_ = nullptr;
-	list<shared_ptr<IPlayerBullet>> playerBullets_{};
+	//unique_ptr<Player> player_ = nullptr;
+	//list<shared_ptr<IPlayerBullet>> playerBullets_{};
 
-
-	//std::vector<std::unique_ptr<Trace>> enemy_;
-	EnemyManager enemyManager_;
 
 	/* ----- CollisionManager コリジョンマネージャー ----- */
 	unique_ptr<CollisionManager> collisionManager_ = nullptr;
-
-	std::list<IEnemy*>* enemies_{};
-
-	LevelManager levelManager_;
-
-	uint32_t fadeTexHD_;
-	unique_ptr<Sprite> fadeSprite_ = nullptr;
-	WorldTransform fadeWt_;
-	Vector4 fadeColor_ = { 0.0f, 0.0f, 0.0f, 0.8f };
-	bool isFade_;
 
 	/* ----- ParticleManager パーティクルマネージャー ----- */
 	ParticleManager* particleManager_;

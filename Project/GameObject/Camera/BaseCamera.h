@@ -4,14 +4,14 @@
 #include "MyMath.h"
 #include "CreateResource.h"
 
-
-// 定数バッファ
-struct TransformationViewMatrix {
-	Matrix4x4 view;
-	Matrix4x4 viewProjection;
-	Matrix4x4 orthoGraphic;
-	Vector3 cameraPosition;
-};
+//
+//// 定数バッファ
+//struct TransformationViewMatrix {
+//	Matrix4x4 view;
+//	Matrix4x4 viewProjection;
+//	Matrix4x4 orthoGraphic;
+//	Vector3 cameraPosition;
+//};
 
 class BaseCamera {
 
