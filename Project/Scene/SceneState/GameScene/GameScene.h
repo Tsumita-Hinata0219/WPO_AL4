@@ -4,6 +4,8 @@
 #include "GameManager.h"
 #include "GameObject.h"
 
+#include "Camera/MainCamera/MainCamera.h"
+
 #include "Player/Player.h"
 #include "Player/PlayerBullet/IPlayerBullet.h"
 #include "Player/PlayerBullet/NormalBullet/NormalBullet.h"
@@ -101,6 +103,7 @@ private:
 
 	// メインカメラ
 	unique_ptr<Camera> camera_ = nullptr;
+	unique_ptr<MainCamera> mainCamera_ = nullptr;
 
 	/* ----- GameWave ゲームウェーブ ----- */
 	int waveCount_;

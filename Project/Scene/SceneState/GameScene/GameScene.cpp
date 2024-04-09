@@ -30,6 +30,8 @@ void GameScene::Initialize() {
 	camera_->rotate = { 0.2f, 0.0f, 0.0f };
 	camera_->translate = { 0.0f, 20.0f, -75.0f };
 
+	mainCamera_ = make_unique<MainCamera>();
+	mainCamera_->Initialize();
 
 	/* ----- Skydome 天球 ----- */
 	Skydome::GetInstance()->Initialize();
@@ -399,4 +401,3 @@ void GameScene::EnemyUpdate()
 {
 	enemyManager_.Update();
 }
-

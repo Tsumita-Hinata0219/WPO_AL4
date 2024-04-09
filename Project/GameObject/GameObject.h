@@ -15,6 +15,7 @@
 #include "CollisionManager.h"
 #include "DebugCamera.h"
 #include "Camera.h"
+#include "BaseCamera.h"
 #include "TextLog.h"
 #include "DrawSystem.h"
 

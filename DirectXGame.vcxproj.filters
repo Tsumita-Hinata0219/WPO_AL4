@@ -180,6 +180,8 @@
     <ClCompile Include="Tsumi\Particle\BaseParticle\BaseParticle.cpp" />
     <ClCompile Include="Tsumi\Utilities\Timer\Timer.cpp" />
     <ClCompile Include="Tsumi\Particle\ParticleArray\ParticleArray.cpp" />
+    <ClCompile Include="Project\GameObject\Camera\RailCamera\RailCamera.cpp" />
+    <ClCompile Include="Project\GameObject\Camera\BaseCamera.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Project\GameObject\Character\Enemy\EnemyManager\EnemyManager.h" />
@@ -380,6 +382,8 @@
     <ClInclude Include="Tsumi\Particle\BaseParticle\BaseParticle.h" />
     <ClInclude Include="Tsumi\Utilities\Timer\Timer.h" />
     <ClInclude Include="Tsumi\Particle\ParticleArray\ParticleArray.h" />
+    <ClInclude Include="Project\GameObject\Camera\RailCamera\RailCamera.h" />
+    <ClInclude Include="Project\GameObject\Camera\BaseCamera.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\shaders\LambertObject.hlsli" />

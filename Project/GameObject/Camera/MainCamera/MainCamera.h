@@ -1,20 +1,11 @@
 #pragma once
 
-#include "MyMath.h"
-
+#include "GameObject.h"
 
 /* MainCameraクラス */
-class MainCamera {
+class MainCamera : public BaseCamera {
 
 public:
-
-
-	MainCamera();
-	~MainCamera();
-
-	void Initialize();
-
-	void Update();
 
 
 private:

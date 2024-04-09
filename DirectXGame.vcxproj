@@ -135,6 +135,7 @@ copy "$(WindowsSdkDir)bin\$(TargetPlatformVersion)\x64\dxil.dll" "$(TargetDir)dx
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Project\GameObject\Camera\BaseCamera.cpp" />
     <ClCompile Include="Project\GameObject\Character\Enemy\EnemyManager\EnemyManager.cpp" />
     <ClCompile Include="Project\GameObject\Character\Enemy\Fire\Fire.cpp" />
     <ClCompile Include="Project\GameObject\Character\Enemy\Bullet\EnemyBullet.cpp" />
@@ -176,6 +177,7 @@ copy "$(WindowsSdkDir)bin\$(TargetPlatformVersion)\x64\dxil.dll" "$(TargetDir)dx
     <ClCompile Include="Project\Scene\SceneState\SelectScene\SelectScene.cpp" />
     <ClCompile Include="Project\Scene\SceneState\TitleScene\TitleScene.cpp" />
     <ClCompile Include="Project\GameObject\Character\Enemy\Trace\Trace.cpp" />
+    <ClCompile Include="Project\GameObject\Camera\RailCamera\RailCamera.cpp" />
     <ClCompile Include="Tsumi\3D\DrawSystem\DrawSystem.cpp" />
     <ClCompile Include="Tsumi\Graphic\GraphicPipelineManager\Line\LineGraphicPipeline.cpp" />
     <ClCompile Include="Tsumi\Particle\BaseParticle\BaseParticle.cpp" />
@@ -228,6 +230,7 @@ copy "$(WindowsSdkDir)bin\$(TargetPlatformVersion)\x64\dxil.dll" "$(TargetDir)dx
     <ClCompile Include="Tsumi\Utilities\Timer\Timer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Project\GameObject\Camera\BaseCamera.h" />
     <ClInclude Include="Project\GameObject\Character\Enemy\Fire\Fire.h" />
     <ClInclude Include="Project\GameObject\Character\Enemy\EnemyManager\EnemyManager.h" />
     <ClInclude Include="Project\GameObject\Character\Enemy\Bullet\EnemyBullet.h" />
@@ -275,6 +278,7 @@ copy "$(WindowsSdkDir)bin\$(TargetPlatformVersion)\x64\dxil.dll" "$(TargetDir)dx
     <ClInclude Include="Project\Scene\SceneState\SelectScene\SelectScene.h" />
     <ClInclude Include="Project\Scene\SceneState\TitleScene\TitleScene.h" />
     <ClInclude Include="Project\GameObject\Character\Enemy\Trace\Trace.h" />
+    <ClInclude Include="Project\GameObject\Camera\RailCamera\RailCamera.h" />
     <ClInclude Include="Tsumi\2D\Sprite\Sprite.h" />
     <ClInclude Include="Tsumi\2D\Sprite\state\ISpriteState.h" />
     <ClInclude Include="Tsumi\2D\Sprite\state\SpriteBoxState\SpriteBoxState.h" />
