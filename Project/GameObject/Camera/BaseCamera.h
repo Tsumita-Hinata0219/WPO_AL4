@@ -74,12 +74,6 @@ public:
 
 #pragma region ビュー行列の設定
 
-	// X, Y, Z軸周りのローカル回転軸
-	Vector3 rotate = { 0.0f, 0.0f, 0.0f };
-
-	// ローカル座標
-	Vector3 translate = { 0.0f, 0.0f, -15.0f };
-
 	// ワールドトランスフォーム
 	WorldTransform worldTransform_{};
 

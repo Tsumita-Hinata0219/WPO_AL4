@@ -6,7 +6,8 @@
 
 #include "Camera/MainCamera/MainCamera.h"
 
-//#include "Player/Player.h"
+#include "Player/Player.h"
+#include "Player/Bullet/PlayerBullet.h"
 
 #include "Skydome/Skydome.h"
 #include "Ground/Ground.h"
@@ -56,7 +57,7 @@ public:
 	/// <summary>
 	/// プレイヤーバレットリストの追加
 	/// </summary>
-	//void AddPlayerBullets(shared_ptr<IPlayerBullet> bullet) { playerBullets_.push_back(bullet); }
+	void AddPlayerBullets(shared_ptr<PlayerBullet> addBullet) { playerBullets_.push_back(addBullet); }
 
 private:
 
@@ -79,13 +80,11 @@ private:
 private:
 
 	// メインカメラ
-	unique_ptr<Camera> camera_ = nullptr;
 	unique_ptr<MainCamera> mainCamera_ = nullptr;
 
 	/* ----- Player プレイヤー ----- */
-	//unique_ptr<Player> player_ = nullptr;
-	//list<shared_ptr<IPlayerBullet>> playerBullets_{};
-
+	unique_ptr<Player> player_ = nullptr;
+	list<shared_ptr<PlayerBullet>> playerBullets_{};
 
 	/* ----- CollisionManager コリジョンマネージャー ----- */
 	unique_ptr<CollisionManager> collisionManager_ = nullptr;

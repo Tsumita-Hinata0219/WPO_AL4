@@ -14,19 +14,20 @@ public:
 	~Player() {};
 
 	void Init();
-	void Update();
+	void Update(BaseCamera* camera);
 	void Draw3D(BaseCamera* camera);
 	void Draw2DF(BaseCamera* camera);
 
+	void OnCollision(uint32_t id) override;
 	void onCollisionWithEnemy();
 	void onCollisionWithEnemyBullet();
 
 #pragma region Get
 
 	WorldTransform GetWorldTransform() { return this->wt_; }
-	Vector3 GetWorldPosition() { return this->wt_.GetWorldPos(); }
-	Vector3 GetRotate() { return this->wt_.rotate; }
-	Vector3 GetSize() { return this->size_; }
+	Vector3 GetOBBWorldPos() override { return this->wt_.GetWorldPos(); }
+	Vector3 GetRotate() override { return this->wt_.rotate; }
+	Vector3 GetSize() override { return this->size_; }
 
 #pragma endregion 
 
@@ -76,7 +77,7 @@ private:
 
 private:
 
-	void ReticleUpdate();
+	void ReticleUpdate(BaseCamera* camera);
 
 
 private:

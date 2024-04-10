@@ -9,10 +9,11 @@ public:
 	PlayerBullet() {};
 	~PlayerBullet() {};
 
-	void Init();
+	void Init(Model& modelHD, Vector3 pos, Vector3 vel);
 	void Update();
-	void Draw();
+	void Draw(BaseCamera* camera);
 
+	void OnCollision(uint32_t id) override;
 	void onCollisionWithEnemy();
 	void onCollisionWithEnemyBullet();
 
@@ -41,7 +42,7 @@ private:
 	Vector3 move_{};
 	Vector3 size_{};
 	bool isDead_;
-	int32_t lLifeTime_;
+	int32_t kLifeTime_;
 	int32_t lifeTimer_;
 };
 

@@ -25,13 +25,10 @@ GameScene::~GameScene()
 void GameScene::Initialize() {
 
 	/* ----- Camera カメラ ----- */
-	camera_ = make_unique<Camera>();
-	camera_->Initialize();
-	camera_->rotate = { 0.2f, 0.0f, 0.0f };
-	camera_->translate = { 0.0f, 20.0f, -75.0f };
-
 	mainCamera_ = make_unique<MainCamera>();
 	mainCamera_->Initialize();
+	mainCamera_->worldTransform_.rotate = { 0.2f, 0.0f, 0.0f };
+	mainCamera_->worldTransform_.translate = { 0.0f, 20.0f, -75.0f };
 
 	/* ----- Skydome 天球 ----- */
 	Skydome::GetInstance()->Initialize();
@@ -41,9 +38,9 @@ void GameScene::Initialize() {
 
 
 	/* ----- Player プレイヤー ----- */
-	//player_->Initialize();
-	//player_ = make_unique<Player>();
-	//player_->SetGameScene(this);
+	player_ = make_unique<Player>();
+	player_->Init();
+	player_->SetRegisterScene(this);
 
 
 	/* ----- CollisionManager コリジョンマネージャー ----- */
@@ -61,7 +58,6 @@ void GameScene::Initialize() {
 void GameScene::Update(GameManager* state) {
 
 	/* ----- GameCamera ゲームカメラ----- */
-	camera_->UpdateMatrix();
 	mainCamera_->UpdateMatrix();
 
 
@@ -73,8 +69,8 @@ void GameScene::Update(GameManager* state) {
 	Ground::GetInstance()->Update();
 
 
-	///* ----- Player プレイヤー ----- */
-	//PlayerUpdate();
+	/* ----- Player プレイヤー ----- */
+	PlayerUpdate();
 
 
 	///* ----- Enemy 敵 ----- */
@@ -133,7 +129,10 @@ void GameScene::ModelDraw() {
 	Ground::GetInstance()->Draw(mainCamera_.get());
 
 	/* ----- Player プレイヤー ----- */
-	//player_->Draw3D(camera_.get());
+	player_->Draw3D(mainCamera_.get());
+	for (shared_ptr<PlayerBullet> bullet : playerBullets_) {
+		bullet->Draw(mainCamera_.get());
+	}
 	//for (shared_ptr<IPlayerBullet> bullet : playerBullets_) {
 	//	bullet->Draw3D(camera_.get());
 	//}
@@ -142,7 +141,7 @@ void GameScene::ModelDraw() {
 	//enemyManager_.Draw(camera_.get());
 
 	/* ----- ParticleManager パーティクルマネージャー ----- */
-	particleManager_->Draw(camera_.get());
+	//particleManager_->Draw(camera_.get());
 }
 
 
@@ -151,7 +150,7 @@ void GameScene::ModelDraw() {
 /// </summary>
 void GameScene::FrontSpriteDraw() {
 
-	//player_->Draw2DFront(camera_.get());
+	player_->Draw2DF(mainCamera_.get());
 
 }
 
@@ -198,11 +197,19 @@ void GameScene::CheckAllCollision()
 // プレイヤー関連の更新処理
 void GameScene::PlayerUpdate()
 {
-	// プレイヤー本体
-	//player_->Update(camera_.get());
+	player_->Update(mainCamera_.get());
 
-	
-
+	for (shared_ptr<PlayerBullet> bullet : playerBullets_) {
+		bullet->Update();
+	}
+	playerBullets_.remove_if([](shared_ptr<PlayerBullet> bullet)
+		{
+			if (bullet->IsDead()) {
+				return true;
+			}
+			return false;
+		}
+	);
 }
 
 

@@ -11,10 +11,10 @@ public:
 	PlayerReticle() {};
 	~PlayerReticle() {};
 
-	void Init();
-	void Update();
-	void Draw3D();
-	void Draw2D();
+	void Init(Model& modelHD, Vector3 initTranslate);
+	void Update(BaseCamera* camera);
+	void Draw3D(BaseCamera* camera);
+	void Draw2DF(BaseCamera* camera);
 
 #pragma region Get
 

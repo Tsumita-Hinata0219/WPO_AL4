@@ -8,6 +8,9 @@ class OBBCollider {
 
 public:
 
+	OBBCollider() {};
+	virtual ~OBBCollider() {};
+
 	/// <summary>
 	/// 衝突時コールバック関数
 	/// </summary>
