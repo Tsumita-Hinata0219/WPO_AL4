@@ -36,7 +36,7 @@ public:
 	/// <summary>
 	/// 描画処理
 	/// </summary>
-	void Draw(Camera* camera);
+	void Draw(BaseCamera* camera);
 
 
 private:

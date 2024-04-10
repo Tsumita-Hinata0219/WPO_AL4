@@ -1,7 +1,7 @@
 #pragma once
 #include "WorldTransform.h"
 #include "ViewProjection.h"
-#include "Camera.h"
+#include "BaseCamera.h"
 
 
 // Modelの前方宣言
@@ -26,7 +26,7 @@ public: // メンバ関数
 	/// <summary>
 	/// 描画処理
 	/// </summary>
-	virtual void Draw(Model* pModel, WorldTransform worldTransform, Camera* camera) = 0;
+	virtual void Draw(Model* pModel, WorldTransform worldTransform, BaseCamera* camera) = 0;
 
 
 private: // メンバ変数

@@ -62,6 +62,7 @@ void GameScene::Update(GameManager* state) {
 
 	/* ----- GameCamera ゲームカメラ----- */
 	camera_->UpdateMatrix();
+	mainCamera_->UpdateMatrix();
 
 
 	/* ----- Skydome 天球 ----- */
@@ -126,10 +127,10 @@ void GameScene::BackSpriteDraw() {
 void GameScene::ModelDraw() {
 
 	/* ----- Skydome 天球 ----- */
-	Skydome::GetInstance()->Draw(camera_.get());
+	Skydome::GetInstance()->Draw(mainCamera_.get());
 
 	/* ----- Ground 床 ----- */
-	Ground::GetInstance()->Draw(camera_.get());
+	Ground::GetInstance()->Draw(mainCamera_.get());
 
 	/* ----- Player プレイヤー ----- */
 	//player_->Draw3D(camera_.get());

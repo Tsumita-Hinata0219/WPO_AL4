@@ -15,8 +15,8 @@ public:
 
 	void Init();
 	void Update();
-	void Draw3D();
-	void Draw2DF();
+	void Draw3D(BaseCamera* camera);
+	void Draw2DF(BaseCamera* camera);
 
 	void onCollisionWithEnemy();
 	void onCollisionWithEnemyBullet();
@@ -48,7 +48,7 @@ private:
 
 	unique_ptr<Model> model_ = nullptr;
 	WorldTransform wt_{};
-	Vector3 vekicity_{};
+	Vector3 velocity_{};
 	Vector3 move_{};
 	float moveSpeed_;
 	const VHInfo vhInfo_ = { 12.5f, 1.5f, 14.5f, -14.5f };

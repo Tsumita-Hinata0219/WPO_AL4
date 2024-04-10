@@ -24,7 +24,7 @@ void ModelObjState::Initialize(Model* pModel) {
 /// <summary>
 /// 描画処理
 /// </summary>
-void ModelObjState::Draw(Model* pModel, WorldTransform worldTransform, Camera* camera) {
+void ModelObjState::Draw(Model* pModel, WorldTransform worldTransform, BaseCamera* camera) {
 
 	VertexData* vertexData = nullptr;
 	Material* material = nullptr;
@@ -60,7 +60,7 @@ void ModelObjState::Draw(Model* pModel, WorldTransform worldTransform, Camera* c
 /// <summary>
 /// コマンドコール処理
 /// </summary>
-void ModelObjState::CommandCall(Model* pModel, WorldTransform worldTransform, Camera* camera) {
+void ModelObjState::CommandCall(Model* pModel, WorldTransform worldTransform, BaseCamera* camera) {
 
 	// コマンドの取得
 	Commands commands = DirectXCommon::GetInstance()->GetCommands();

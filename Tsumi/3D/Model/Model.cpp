@@ -74,7 +74,7 @@ void Model::CreateFromObj(const std::string& directoryPath, const std::string& r
 /// <summary>
 /// 描画処理
 /// </summary>
-void Model::Draw(WorldTransform worldTransform, Camera* camera) {
+void Model::Draw(WorldTransform worldTransform, BaseCamera* camera) {
 
 	this->state_->Draw(this, worldTransform, camera);
 }

@@ -10,7 +10,6 @@
 #include "CreateResource.h"
 #include "IModelState.h"
 #include "DescriptorManager.h"
-#include "Camera.h"
 
 #include <fstream>
 #include <sstream>
@@ -41,7 +40,7 @@ public: // メンバ関数
 	/// <summary>
 	/// 描画処理
 	/// </summary>
-	void Draw(Model* pModel, WorldTransform worldTransform, Camera* camera) override;
+	void Draw(Model* pModel, WorldTransform worldTransform, BaseCamera* camera) override;
 
 
 private: // メンバ関数
@@ -49,7 +48,7 @@ private: // メンバ関数
 	/// <summary>
 	/// コマンドコール処理
 	/// </summary>
-	void CommandCall(Model* pModel, WorldTransform worldTransform, Camera* camera);
+	void CommandCall(Model* pModel, WorldTransform worldTransform, BaseCamera* camera);
 
 private: // メンバ関数
 

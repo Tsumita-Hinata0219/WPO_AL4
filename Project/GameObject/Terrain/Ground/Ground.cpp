@@ -55,7 +55,7 @@ void Ground::Update()
 
 
 // 描画処理
-void Ground::Draw(Camera* camera) 
+void Ground::Draw(BaseCamera* camera)
 {
 	this->model_->Draw(this->worldTransform_, camera);
 }

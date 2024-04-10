@@ -26,7 +26,7 @@ void ModelPlaneState::Initialize(Model* pModel) {
 /// <summary>
 /// 描画処理
 /// </summary>
-void ModelPlaneState::Draw(Model* pModel, WorldTransform worldTransform, Camera* camera) {
+void ModelPlaneState::Draw(Model* pModel, WorldTransform worldTransform, BaseCamera* camera) {
 
 	VertexData* vertexData = nullptr;
 	Material* materialData = nullptr;
@@ -78,7 +78,7 @@ void ModelPlaneState::Draw(Model* pModel, WorldTransform worldTransform, Camera*
 /// <summary>
 /// コマンドコール処理
 /// </summary>
-void ModelPlaneState::CommandCall(uint32_t texture, WorldTransform worldTransform, Camera* camera) {
+void ModelPlaneState::CommandCall(uint32_t texture, WorldTransform worldTransform, BaseCamera* camera) {
 	
 	// コマンドの取得
 	Commands commands = DirectXCommon::GetInstance()->GetCommands();

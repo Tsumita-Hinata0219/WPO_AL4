@@ -8,6 +8,7 @@
 #include "ObjDataResource.h"
 #include "ModelPlaneState.h"
 #include "ModelSphereState.h"
+#include "BaseCamera.h"
 
 
 /* Modelクラス */
@@ -31,7 +32,7 @@ public: // メンバ関数
 	/// <summary>
 	/// 描画処理
 	/// </summary>
-	void Draw(WorldTransform worldTransform, Camera* camera);
+	void Draw(WorldTransform worldTransform, BaseCamera* camera);
 
 
 #pragma region Get
