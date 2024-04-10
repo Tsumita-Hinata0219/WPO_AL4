@@ -40,7 +40,7 @@ void Sprite::Initialize(Vector2 size, Vector4 color) {
 /// <summary>
 /// 描画処理
 /// </summary>
-void Sprite::Draw(uint32_t texHandle, WorldTransform& transform, Camera* camera) {
+void Sprite::Draw(uint32_t texHandle, WorldTransform& transform, BaseCamera* camera) {
 
 	// 頂点データを設定する
 	SetVertex(transform);

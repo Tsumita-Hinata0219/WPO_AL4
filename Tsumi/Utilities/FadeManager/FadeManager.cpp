@@ -39,7 +39,7 @@ void FadeManager::Initialize(FunctionFade func)
 
 
 // 描画処理
-void FadeManager::Draw(Camera* camera)
+void FadeManager::Draw(BaseCamera* camera)
 {
 	// カラーの設定
 	FadeManager::GetInstance()->sprite_->SetColor(FadeManager::GetInstance()->color_);
