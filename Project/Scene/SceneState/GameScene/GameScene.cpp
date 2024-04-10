@@ -102,12 +102,12 @@ void GameScene::Update(GameManager* state) {
 	
 	ImGui::Text("");
 	ImGui::Text("Camera");
-	ImGui::DragFloat3("Rotate", &camera_->rotate.x, 0.01f);
-	ImGui::DragFloat3("Translate", &camera_->translate.x, 0.01f);
+	ImGui::DragFloat3("Rotate", &mainCamera_->worldTransform_.rotate.x, 0.01f);
+	ImGui::DragFloat3("Translate", &mainCamera_->worldTransform_.translate.x, 0.01f);
 	ImGui::Text("");
 
 	ImGui::End();
-
+	
 #endif // _DEBUG
 }
 

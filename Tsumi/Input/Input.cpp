@@ -121,7 +121,7 @@ void GamePadInput::BeginFrame() {
 	// ジョイスティックの状態をポーリング
 	for (DWORD i = 0; i < XUSER_MAX_COUNT; ++i) {
 		XINPUT_STATE state;
-		ZeroMemory(&state, sizeof(XINPUT_STATE));
+		ZeroMemory(&state, sizeof(XINPUT_STATE));   
 	}
 }
 
