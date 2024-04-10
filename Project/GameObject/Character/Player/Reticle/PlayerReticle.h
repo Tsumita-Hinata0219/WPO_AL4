@@ -27,9 +27,13 @@ public:
 
 	void SetPlayer(Player* player) { this->player_ = player; }
 	void SetParent(WorldTransform* parent) { this->wt3D_.SetParent(parent); }
+	void SetReticlePos(Vector3 setPos) { this->wt3D_.translate = setPos; }
 
 #pragma endregion
 
+private:
+
+	void Move();
 
 private:
 
@@ -46,4 +50,5 @@ private:
 	Vector3 velocity_{};
 	Vector2 rStick_{};
 	Vector2 spritePos_{};
+	float moveSpeed_;
 };

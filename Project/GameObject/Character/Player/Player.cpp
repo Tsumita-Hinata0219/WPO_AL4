@@ -22,8 +22,10 @@ void Player::Init()
 	OBBCollider::SetCollisionMask(ObjectMask::Player);
 
 	reticle_ = make_unique<PlayerReticle>();
+	reticle_->Init((*model_), Vector3::zero);
 	reticle_->SetPlayer(this);
 	reticle_->SetParent(&wt_);
+	reticle_->SetReticlePos({ 0.0f, 0.0f, 15.0f });
 }
 
 void Player::Update(BaseCamera* camera)
@@ -42,6 +44,7 @@ void Player::Update(BaseCamera* camera)
 void Player::Draw3D(BaseCamera* camera)
 {
 	model_->Draw(wt_, camera);
+	reticle_->Draw3D(camera);
 }
 
 void Player::Draw2DF(BaseCamera* camera)

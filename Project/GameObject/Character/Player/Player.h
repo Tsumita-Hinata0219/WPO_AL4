@@ -25,6 +25,7 @@ public:
 #pragma region Get
 
 	WorldTransform GetWorldTransform() { return this->wt_; }
+	Vector3 GetWorldPos() { return this->wt_.GetWorldPos(); }
 	Vector3 GetOBBWorldPos() override { return this->wt_.GetWorldPos(); }
 	Vector3 GetRotate() override { return this->wt_.rotate; }
 	Vector3 GetSize() override { return this->size_; }
