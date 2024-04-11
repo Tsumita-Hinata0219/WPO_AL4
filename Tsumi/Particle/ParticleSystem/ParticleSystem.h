@@ -19,7 +19,7 @@ public: // メンバ関数
 
 	// 初期化処理、更新処理、描画処理
 	void Initialize();
-	void Draw(list<ParticleProperties> prope, Camera* camera);
+	void Draw(list<ParticleProperties> prope, BaseCamera* camera);
 
 #pragma region Get 取得
 
@@ -42,7 +42,7 @@ private: // メンバ関数
 	void CommandCall();
 
 	// ビルボードの処理
-	Matrix4x4 CalcBillBord(Camera* camera);
+	Matrix4x4 CalcBillBord(BaseCamera* camera);
 
 
 private: // メンバ変数

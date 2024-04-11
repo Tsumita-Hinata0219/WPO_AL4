@@ -1,7 +1,6 @@
 #pragma once
 
 #include "WorldTransform.h"
-#include "ViewProjection.h"
 #include "IModelState.h"
 #include "ModelManager.h"
 #include "ModelObjState.h"

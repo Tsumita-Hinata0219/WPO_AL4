@@ -44,7 +44,7 @@ void EngineManual::Initialize()
 /// <summary>
 /// 更新処理
 /// </summary>
-void EngineManual::Update(Camera* camera)
+void EngineManual::Update(BaseCamera* camera)
 {
 	camera;
 	// 3Dモデル
@@ -121,7 +121,7 @@ void EngineManual::Update(Camera* camera)
 /// <summary>
 /// 背景スプライトの描画処理
 /// </summary>
-void EngineManual::BackSpriteDraw(Camera* camera)
+void EngineManual::BackSpriteDraw(BaseCamera* camera)
 {
 	camera;
 	// 背景スプライト
@@ -132,7 +132,7 @@ void EngineManual::BackSpriteDraw(Camera* camera)
 /// <summary>
 /// ３Dオブジェクトの描画処理
 /// </summary>
-void EngineManual::ModelDraw(Camera* camera)
+void EngineManual::ModelDraw(BaseCamera* camera)
 {
 	camera;
 	// 3Dモデル
@@ -143,7 +143,7 @@ void EngineManual::ModelDraw(Camera* camera)
 /// <summary>
 /// 前景スプライトの描画処理
 /// </summary>
-void EngineManual::FrontSpriteDraw(Camera* camera)
+void EngineManual::FrontSpriteDraw(BaseCamera* camera)
 {
 	camera;
 	// 前景スプライト

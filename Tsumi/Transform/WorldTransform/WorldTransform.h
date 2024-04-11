@@ -13,9 +13,6 @@ struct TransformationMatrix {
 };
 
 
-// 前方宣言
-//struct TransformationMatrix;
-
 /// <summary>
 /// ワールド変換データ
 /// </summary>

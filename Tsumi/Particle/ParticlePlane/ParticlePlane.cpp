@@ -28,7 +28,7 @@ void ParticlePlane::Initialize(Particle* pParticle) {
 /// <summary>
 /// 描画処理
 /// </summary>
-void ParticlePlane::Draw(uint32_t texHD, Particle* pParticle, list<ParticleProperties> prope, ViewProjection view) {
+void ParticlePlane::Draw(uint32_t texHD, Particle* pParticle, list<ParticleProperties> prope, BaseCamera* camera) {
 
 	pParticle;
 	VertexData* vertexData = nullptr;
@@ -75,7 +75,7 @@ void ParticlePlane::Draw(uint32_t texHD, Particle* pParticle, list<ParticlePrope
 		MakeAffineMatrix(Vector3::one, Vector3::zero, Vector3::zero);
 
 	// ビルボードの計算
-	Matrix4x4 billMat = CalcBillBord(view);
+	Matrix4x4 billMat = CalcBillBord(camera);
 
 
 	instanceNum_ = 0;
@@ -87,7 +87,7 @@ void ParticlePlane::Draw(uint32_t texHD, Particle* pParticle, list<ParticlePrope
 			Matrix4x4 scaleMat = MakeScaleMatrix((*itr).worldTransform.scale);
 			Matrix4x4 translateMat = MakeTranslateMatrix((*itr).worldTransform.translate);
 			Matrix4x4 worldPos = scaleMat * (billMat * translateMat);
-			Matrix4x4 worldView = view.matView * view.matProjection;
+			Matrix4x4 worldView = camera->matView * camera->matProjection;
 			Matrix4x4 matWorld = worldPos * worldView;
 
 			(*itr).uvTransform.matWorld = MakeAffineMatrix(
@@ -141,10 +141,10 @@ void ParticlePlane::CommandCall(uint32_t texHandle) {
 
 
 // ビルボードの処理
-Matrix4x4 ParticlePlane::CalcBillBord(ViewProjection view)
+Matrix4x4 ParticlePlane::CalcBillBord(BaseCamera* camera)
 {
 	Matrix4x4 backToFrontMat = Matrix4x4::identity;
-	Matrix4x4 billBoardMat = backToFrontMat * view.rotateMat;
+	Matrix4x4 billBoardMat = backToFrontMat * camera->rotateMat;
 	billBoardMat.m[3][0] = 0.0f;
 	billBoardMat.m[3][1] = 0.0f;
 	billBoardMat.m[3][2] = 0.0f;

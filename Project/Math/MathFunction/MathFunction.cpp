@@ -105,12 +105,12 @@ Vector2 Lerp(const Vector2& start, const Vector2& end, const float t) {
 }
 
 // Vector3 -> Vector2 への変換 今はそのまま対する値を送ってるだけだけど今後はもっと変換処理作っていく
-Vector2 ConvertVector(const Vector3& v, const ViewProjection& view) {
-	Vector3 worldPos = v;
-	Matrix4x4 matViewProjectionViewPort = view.matView * view.matProjection * view.matViewPort;
-	worldPos = TransformByMatrix(worldPos, matViewProjectionViewPort);
-	return { worldPos.x, worldPos.y };
-}
+//Vector2 ConvertVector(const Vector3& v, BaseCamera* camera) {
+//	Vector3 worldPos = v;
+//	Matrix4x4 matViewProjectionViewPort = camera->matView * camera->matProjection * camera->matViewPort;
+//	worldPos = TransformByMatrix(worldPos, matViewProjectionViewPort);
+//	return { worldPos.x, worldPos.y };
+//}
 
 // クランプ
 Vector2 Clamp(const Vector2& value, const Vector2& minValue, const Vector2& maxValue)

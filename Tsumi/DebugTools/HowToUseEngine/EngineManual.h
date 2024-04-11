@@ -26,22 +26,22 @@ public: // メンバ関数
 	/// <summary>
 	/// 更新処理
 	/// </summary>
-	void Update(Camera* camera);
+	void Update(BaseCamera* camera);
 
 	/// <summary>
 	/// 背景スプライトの描画処理
 	/// </summary>
-	void BackSpriteDraw(Camera* camera);
+	void BackSpriteDraw(BaseCamera* camera);
 
 	/// <summary>
 	/// ３Dオブジェクトの描画処理
 	/// </summary>
-	void ModelDraw(Camera* camera);
+	void ModelDraw(BaseCamera* camera);
 
 	/// <summary>
 	/// 前景スプライトの描画処理
 	/// </summary>
-	void FrontSpriteDraw(Camera* camera);
+	void FrontSpriteDraw(BaseCamera* camera);
 
 private: // メンバ変数
 

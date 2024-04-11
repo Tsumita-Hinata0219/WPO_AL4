@@ -25,7 +25,7 @@ void ParticleRenderer::Initialize(uint32_t maxInstance)
 
 
 // 描画処理
-void ParticleRenderer::Draw(const list<unique_ptr<IParticle>>& p, Camera* camera)
+void ParticleRenderer::Draw(const list<unique_ptr<IParticle>>& p, BaseCamera* camera)
 {
 	VertexData* vertexData = nullptr;
 	MaterialParticle* materialData = nullptr;
@@ -138,7 +138,7 @@ void ParticleRenderer::CommandCall()
 
 
 // ビルボードの処理
-Matrix4x4 ParticleRenderer::CalcBillBord(Camera* camera)
+Matrix4x4 ParticleRenderer::CalcBillBord(BaseCamera* camera)
 {
 	Matrix4x4 backToFrontMat = Matrix4x4::identity;
 	Matrix4x4 billBoardMat = backToFrontMat * camera->rotateMat;

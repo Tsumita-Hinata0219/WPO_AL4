@@ -1,7 +1,6 @@
 #include "BaseCamera.h"
 
 
-
 // 初期化処理
 void BaseCamera::Initialize(Vector3 initRotate, Vector3 initTranslate)
 {

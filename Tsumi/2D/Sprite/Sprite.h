@@ -4,7 +4,6 @@
 #include "Struct.h"
 #include "SpriteTransform.h"
 #include "WorldTransform.h"
-#include "ViewProjection.h"
 #include "BaseCamera.h"
 #include "TextureManager.h"
 #include "WinApp.h"

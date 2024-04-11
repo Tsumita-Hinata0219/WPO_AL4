@@ -6,7 +6,7 @@
 void SelectScene::Initialize()
 {
 	// メインカメラ
-	camera_ = make_unique<Camera>();
+	camera_ = make_unique<BaseCamera>();
 	camera_->Initialize();
 
 }

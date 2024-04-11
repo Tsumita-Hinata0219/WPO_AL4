@@ -5,7 +5,7 @@
 #include "LineGraphicPipeline.h"
 #include "CreateResource.h"
 #include "DescriptorManager.h"
-#include "Camera.h"
+#include "BaseCamera.h"
 
 
 /* DrawSyetemクラス */
@@ -29,7 +29,7 @@ public: // メンバ関数
 	/// <summary>
 	/// 描画処理
 	/// </summary>
-	static void Line(Segment segment, Camera* camera, Vector4 color = { 1.0f, 1.0f, 1.0f, 1.0f });
+	static void Line(Segment segment, BaseCamera* camera, Vector4 color = { 1.0f, 1.0f, 1.0f, 1.0f });
 
 
 private: // メンバ関数
@@ -37,7 +37,7 @@ private: // メンバ関数
 	/// <summary>
 	/// コマンドコール
 	/// </summary>
-	void CommandCallTypeLine(Camera* camera);
+	void CommandCallTypeLine(BaseCamera* camera);
 
 private: // メンバ変数
 

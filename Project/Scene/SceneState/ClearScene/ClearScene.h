@@ -47,6 +47,6 @@ public:
 private:
 
 	// メインカメラ
-	unique_ptr<Camera> camera_ = nullptr;
+	unique_ptr<BaseCamera> camera_ = nullptr;
 };
 

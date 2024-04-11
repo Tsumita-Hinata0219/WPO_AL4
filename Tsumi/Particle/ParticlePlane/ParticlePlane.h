@@ -24,7 +24,7 @@ public: // メンバ関数
 	/// <summary>
 	/// 描画処理
 	/// </summary>
-	void Draw(uint32_t texHD, Particle* pParticle, list<ParticleProperties> prope , ViewProjection view) override;
+	void Draw(uint32_t texHD, Particle* pParticle, list<ParticleProperties> prope , BaseCamera* camera) override;
 
 
 private: // メンバ関数
@@ -37,7 +37,7 @@ private: // メンバ関数
 	/// <summary>
 	/// ビルボードの処理
 	/// </summary>
-	Matrix4x4 CalcBillBord(ViewProjection view);
+	Matrix4x4 CalcBillBord(BaseCamera* camera);
 
 
 private: // メンバ変数

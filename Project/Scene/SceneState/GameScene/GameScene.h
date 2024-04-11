@@ -80,7 +80,7 @@ private:
 private:
 
 	// メインカメラ
-	unique_ptr<MainCamera> mainCamera_ = nullptr;
+	unique_ptr<BaseCamera> mainCamera_ = nullptr;
 
 	/* ----- Player プレイヤー ----- */
 	unique_ptr<Player> player_ = nullptr;

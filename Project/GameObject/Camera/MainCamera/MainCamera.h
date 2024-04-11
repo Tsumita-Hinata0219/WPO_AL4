@@ -3,7 +3,7 @@
 #include "GameObject.h"
 
 /* MainCameraクラス */
-class MainCamera : public BaseCamera {
+class MainCamera {
 
 public:
 
@@ -13,4 +13,3 @@ private:
 
 
 };
-

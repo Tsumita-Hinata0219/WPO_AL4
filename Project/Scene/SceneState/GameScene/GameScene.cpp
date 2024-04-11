@@ -25,7 +25,7 @@ GameScene::~GameScene()
 void GameScene::Initialize() {
 
 	/* ----- Camera カメラ ----- */
-	mainCamera_ = make_unique<MainCamera>();
+	mainCamera_ = make_unique<BaseCamera>();
 	mainCamera_->Initialize();
 	mainCamera_->worldTransform_.rotate = { 0.2f, 0.0f, 0.0f };
 	mainCamera_->worldTransform_.translate = { 0.0f, 20.0f, -75.0f };

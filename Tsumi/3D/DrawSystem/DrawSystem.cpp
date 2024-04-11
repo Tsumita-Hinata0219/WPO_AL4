@@ -22,7 +22,7 @@ void DrawSystem::Initialize() {
 
 
 // 描画処理
-void DrawSystem::Line(Segment segment, Camera* camera, Vector4 color) {
+void DrawSystem::Line(Segment segment, BaseCamera* camera, Vector4 color) {
 
 	VertexData* vertexData = nullptr;
 	Vector4* materialData = nullptr;
@@ -51,7 +51,7 @@ void DrawSystem::Line(Segment segment, Camera* camera, Vector4 color) {
 
 
 // コマンドコール
-void DrawSystem::CommandCallTypeLine(Camera* camera) {
+void DrawSystem::CommandCallTypeLine(BaseCamera* camera) {
 
 	// コマンドの取得
 	Commands commands = DirectXCommon::GetInstance()->GetCommands();

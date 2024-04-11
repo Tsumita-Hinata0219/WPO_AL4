@@ -20,7 +20,7 @@ void ParticleSystem::Initialize()
 
 
 // 描画処理
-void ParticleSystem::Draw(list<ParticleProperties> prope, Camera* camera)
+void ParticleSystem::Draw(list<ParticleProperties> prope, BaseCamera* camera)
 {
 	VertexData* vertexData = nullptr;
 	MaterialParticle* materialData = nullptr;
@@ -135,7 +135,7 @@ void ParticleSystem::CommandCall()
 
 
 // ビルボードの処理
-Matrix4x4 ParticleSystem::CalcBillBord(Camera* camera)
+Matrix4x4 ParticleSystem::CalcBillBord(BaseCamera* camera)
 {
 	Matrix4x4 backToFrontMat = Matrix4x4::identity;
 	Matrix4x4 billBoardMat = backToFrontMat * camera->rotateMat;

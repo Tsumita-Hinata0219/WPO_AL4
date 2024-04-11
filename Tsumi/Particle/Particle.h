@@ -1,6 +1,5 @@
 #pragma once
 #include "WorldTransform.h"
-#include "ViewProjection.h"
 #include "IParticleState.h"
 #include "ParticlePlane.h"
 #include "MyMath.h"
@@ -46,7 +45,7 @@ public: // メンバ関数
 	/// <summary>
 	/// 描画処理
 	/// </summary>
-	void Draw(uint32_t useTex, ViewProjection view);
+	void Draw(uint32_t useTex, BaseCamera* camera);
 
 	/// <summary>
 	/// 先頭から情報を取り出す

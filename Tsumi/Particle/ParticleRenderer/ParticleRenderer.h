@@ -18,7 +18,7 @@ public: // メンバ関数
 
 	// 初期化処理、更新処理、描画処理
 	void Initialize(uint32_t maxInstance);
-	void Draw(const list<unique_ptr<IParticle>>& p, Camera* camera);
+	void Draw(const list<unique_ptr<IParticle>>& p, BaseCamera* camera);
 
 #pragma region Get 取得
 
@@ -41,7 +41,7 @@ private: // メンバ関数
 	void CommandCall();
 
 	// ビルボードの処理
-	Matrix4x4 CalcBillBord(Camera* camera);
+	Matrix4x4 CalcBillBord(BaseCamera* camera);
 
 
 private: // メンバ変数

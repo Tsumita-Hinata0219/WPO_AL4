@@ -13,8 +13,6 @@
 #include "RandomGenerator.h"
 #include "TimedCall.h"
 #include "CollisionManager.h"
-#include "DebugCamera.h"
-#include "Camera.h"
 #include "BaseCamera.h"
 #include "TextLog.h"
 #include "DrawSystem.h"
