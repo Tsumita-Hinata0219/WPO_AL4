@@ -23,12 +23,12 @@ public:
 	/// <summary>
 	/// コンストラクタ
 	/// </summary>
-	BaseCamera() {};
+	BaseCamera();
 
 	/// <summary>
 	/// デストラクタ
 	/// </summary>
-	~BaseCamera() {};
+	~BaseCamera();
 
 	/// <summary>
 	/// 初期化処理
