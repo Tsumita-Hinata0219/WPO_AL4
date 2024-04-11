@@ -6,7 +6,6 @@
 #include "WorldTransform.h"
 
 
-
 // 定数バッファ
 struct TransformationViewMatrix {
 	Matrix4x4 view;
@@ -48,7 +47,6 @@ public:
 	Vector3 GetWorldPos();
 
 #pragma endregion 
-
 
 private:
 

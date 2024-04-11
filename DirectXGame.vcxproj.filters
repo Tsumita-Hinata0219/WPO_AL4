@@ -52,7 +52,6 @@
     <ClCompile Include="externals\imgui\imgui_widgets.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Project\GameManager\GameManager.cpp" />
-    <ClCompile Include="Project\GameObject\Camera\Camera.cpp" />
     <ClCompile Include="Project\GameObject\Camera\MainCamera\MainCamera.cpp" />
     <ClCompile Include="Project\GameObject\Terrain\Ground\Ground.cpp" />
     <ClCompile Include="Project\GameObject\Terrain\Skydome\Skydome.cpp" />
@@ -107,7 +106,6 @@
     <ClCompile Include="Tsumi\Utilities\TimedCall\TimedCall.cpp" />
     <ClCompile Include="Project\Math\MathEasing\MathEasing.cpp" />
     <ClCompile Include="Tsumi\2D\Sprite\Sprite.cpp" />
-    <ClCompile Include="Tsumi\2D\Sprite\state\SpriteBoxState\SpriteBoxState.cpp" />
     <ClCompile Include="Tsumi\3D\Model\Model.cpp" />
     <ClCompile Include="Tsumi\3D\Model\ModelManager\ModelManager.cpp" />
     <ClCompile Include="Tsumi\3D\Model\ModelObj\ModelObjState.cpp" />
@@ -119,7 +117,6 @@
     <ClCompile Include="Tsumi\Base\DXCommon\DirectXCommon.cpp" />
     <ClCompile Include="Tsumi\Base\WinApp\WinApp.cpp" />
     <ClCompile Include="Tsumi\CreateResource\CreateResource.cpp" />
-    <ClCompile Include="Tsumi\DebugTools\DebugCamera\DebugCamera.cpp" />
     <ClCompile Include="Tsumi\DebugTools\HowToUseEngine\EngineManual.cpp" />
     <ClCompile Include="Tsumi\DescriptorManager\DescriptorManager.cpp" />
     <ClCompile Include="Tsumi\Graphic\GraphicPipelineManager\GraphicPipelineManager.cpp" />
@@ -137,7 +134,6 @@
     <ClCompile Include="Tsumi\TextureManager\TextureDataResource\TextureDataResource.cpp" />
     <ClCompile Include="Tsumi\TextureManager\TextureManager.cpp" />
     <ClCompile Include="Tsumi\Transform\SpriteTransform\SpriteTransform.cpp" />
-    <ClCompile Include="Tsumi\Transform\ViewProjection\ViewProjection.cpp" />
     <ClCompile Include="Tsumi\Transform\WorldTransform\WorldTransform.cpp" />
     <ClCompile Include="Tsumi\Tsumi.cpp" />
     <ClCompile Include="Tsumi\Utilities\CollisionManager\CollisionManager.cpp" />
@@ -206,7 +202,6 @@
     <ClInclude Include="Project\Scene\SceneState\SelectScene\SelectScene.h" />
     <ClInclude Include="Project\Scene\SceneState\TitleScene\TitleScene.h" />
     <ClInclude Include="Project\GameManager\GameManager.h" />
-    <ClInclude Include="Project\GameObject\Camera\Camera.h" />
     <ClInclude Include="Project\GameObject\Camera\MainCamera\MainCamera.h" />
     <ClInclude Include="Project\GameObject\GameObject.h" />
     <ClInclude Include="Project\GameObject\Terrain\Ground\Ground.h" />
@@ -279,8 +274,6 @@
     <ClInclude Include="Project\Math\MathEasing\MathEasing.h" />
     <ClInclude Include="Project\Math\MathGeometry\MathGeometry.h" />
     <ClInclude Include="Tsumi\2D\Sprite\Sprite.h" />
-    <ClInclude Include="Tsumi\2D\Sprite\state\ISpriteState.h" />
-    <ClInclude Include="Tsumi\2D\Sprite\state\SpriteBoxState\SpriteBoxState.h" />
     <ClInclude Include="Tsumi\3D\Model\IModelState.h" />
     <ClInclude Include="Tsumi\3D\Model\Model.h" />
     <ClInclude Include="Tsumi\3D\Model\ModelManager\ModelManager.h" />
@@ -293,7 +286,6 @@
     <ClInclude Include="Tsumi\Base\DXCommon\DirectXCommon.h" />
     <ClInclude Include="Tsumi\Base\WinApp\WinApp.h" />
     <ClInclude Include="Tsumi\CreateResource\CreateResource.h" />
-    <ClInclude Include="Tsumi\DebugTools\DebugCamera\DebugCamera.h" />
     <ClInclude Include="Tsumi\DebugTools\HowToUseEngine\EngineManual.h" />
     <ClInclude Include="Tsumi\DescriptorManager\DescriptorManager.h" />
     <ClInclude Include="Tsumi\Graphic\GraphicPipelineManager\GraphicPipelineManager.h" />
@@ -313,7 +305,6 @@
     <ClInclude Include="Tsumi\TextureManager\TextureDataResource\TextureDataResource.h" />
     <ClInclude Include="Tsumi\TextureManager\TextureManager.h" />
     <ClInclude Include="Tsumi\Transform\SpriteTransform\SpriteTransform.h" />
-    <ClInclude Include="Tsumi\Transform\ViewProjection\ViewProjection.h" />
     <ClInclude Include="Tsumi\Transform\WorldTransform\WorldTransform.h" />
     <ClInclude Include="Tsumi\Tsumi.h" />
     <ClInclude Include="Tsumi\Utilities\CollisionManager\Collider\AABBCollider.h" />

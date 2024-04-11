@@ -18,6 +18,8 @@ struct TransformationMatrix {
 /// </summary>
 struct WorldTransform {
 
+	WorldTransform& operator=(const WorldTransform& other) = default;
+
 	// ローカルスケール
 	Vector3 scale = Vector3::one;
 	// ローカル回転軸

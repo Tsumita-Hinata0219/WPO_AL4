@@ -3,7 +3,7 @@
 #include "BaseCamera.h"
 
 
-class RailCamera : public BaseCamera {
+class RailCamera {
 
 public: // メンバ関数
 
